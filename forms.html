@@ -4,46 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <style>
+        small{
+            color:red;
+        }
+    </style>
 </head>
 <body>
-    <form action="" method="POST">
-        <label for="name">Full Name:</label><br>
-        <input type="text" name="name" id="name" required><br>
-        <label for="email">E-mail:</label><br>
-        <input type="email" name="email" id="email" placeholder="eg. name@email.com" required><br>
-        <label for="age">Age:</label><br>
-        <input type="number" name="age" id="age" required><br>
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" name="phone" id="phone" required><br>
-        <label for="dob">Date of Birth:</label><br>
-        <input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" required><br>
+    <h1>FORMS</h1>
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:<small>*</small></label><br>
+            <input type="text" name="name" id="name" required><br>
+            <label for="email">E-mail:<small>*</small></label><br>
+            <input type="email" name="email" id="email" placeholder="eg. name@email.com" required><br>
+            <label for="age">Age:<small>*</small></label><br>
+            <input type="number" name="age" id="age" min="3" required><br>
+            <label for="phone">Phone Number:<small>*</small></label><br>
+            <input type="tel" name="phone" id="phone" required><br>
+            <label for="dob">Date of Birth:<small>*</small></label><br>
+            <input type="date" name="dob" id="dob" max="2020-01-01" required><br>
         
-        <select>
-            <option value="">Select your Country of Residence</option>
-            <option value="Ghana">Ghana</option>
-            <option value="Nigeria">Nigeria</option>
-            <option value="Kenya">Kenya</option>
-            <option value="South Africa">South Africa</option>
-        </select>
-    </form>
-    
-    <form action="" method="post">
-        <label for="ma">Male:</label>
-        <input type="radio" name="gender" id="ma">
-        <label for="fm">Female:</label>
-        <input type="radio" name="gender" id="fm"><br>
-        <label>What do you enjoy doing?</label><br>
-        <label for="sing">Singing</label>
-        <input type="checkbox" name="interest" id="sing"><br>
-        <label for="dance">Dancing</label>
-        <input type="checkbox" name="interest" id="dance"><br>
-        <label for="read">Reading</label>
-        <input type="checkbox" name="interest" id="read"><br>
-        <label for="sports">Sports</label>
-        <input type="checkbox" name="interest" id="sports"><br>
-        <label for="comments">Comments and Feedback</label><br>
-        <textarea id="comments" cols="20" rows="5"></textarea><br>
+            <label for="country">Country:<small>*</small></label>
+            <select id="country" name="country" required>
+                <option value="">Select your Country of Residence</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Kenya">Kenya</option>
+                <option value="South Africa">South Africa</option>
+            </select>        
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>Interests</legend>
+            <label>Gender:<small>*</small></label>
+            <label for="ma">Male</label>
+            <input type="radio" name="gender" id="ma">
+            <label for="fm">Female</label>
+            <input type="radio" name="gender" id="fm"><br>
+            <label>What do you enjoy doing?</label><br>
+            <label for="sing">Singing</label>
+            <input type="checkbox" name="interest" id="sing"><br>
+            <label for="dance">Dancing</label>
+            <input type="checkbox" name="interest" id="dance"><br>
+            <label for="read">Reading</label>
+            <input type="checkbox" name="interest" id="read"><br>
+            <label for="sports">Sports</label>
+            <input type="checkbox" name="interest" id="sports"><br>
+            <label for="comments">Comments and Feedback<small>*</small></label><br>
+            <textarea id="comments" cols="20" rows="5" required></textarea><br>
+        </fieldset>
         <input type="submit" value="Submit">
     </form>
+    
+    
 </body>
 </html>
